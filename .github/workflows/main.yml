@@ -16,6 +16,6 @@ jobs:
         with:
           java-version: "21"
           cache: maven
-          distribution: ''
+          distribution: 'temurin'
       - uses: browser-actions/setup-chrome@v2
       - run: mvn clean test
