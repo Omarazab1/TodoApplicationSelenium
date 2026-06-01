@@ -39,7 +39,7 @@ public class BaseTest {
     public void tearDown(ITestResult result){
         String testCaseName = result.getMethod().getMethodName();
         File destFile = new File("target" + File.separator + "screenshots" + File.separator + testCaseName + ".png") ;
-        takeScreenShoot(destFile);
+        takeScreenShot(destFile);
         getDriver().quit();
     }
 
@@ -51,7 +51,7 @@ public class BaseTest {
         }
     }
 
-    public  void takeScreenShoot(File destFile){
+    public  void takeScreenShot(File destFile){
         File file = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
         try {
             FileUtils.copyFile(file , destFile);
